@@ -8,7 +8,7 @@ const violet: Palette = { from: '#12041f', via: '#4c1d95', to: '#08050d', accent
 const rose: Palette = { from: '#1f0410', via: '#7f1d3f', to: '#0d0508', accent: '#fb7185' };
 const teal: Palette = { from: '#03201c', via: '#0f766e', to: '#050d0c', accent: '#2dd4bf' };
 const ember: Palette = { from: '#1c0a03', via: '#7c2d12', to: '#0a0605', accent: '#fb923c' };
-const shot = (u: string) => `https://s0.wp.com/mshots/v1/${encodeURIComponent(u)}?w=1200`;
+const shot = (u: string) => `https://image.thum.io/get/width/1200/crop/750/noanimate/${u}`;
 export const profile = {
   fullName: 'Husnain Tanveer', displayName: 'Husnain Tanveer', firstName: 'HUSNAIN',
   seriesTag: 'THE SERIES', originalLabel: 'A HUSNAIN TANVEER ORIGINAL',
