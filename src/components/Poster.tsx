@@ -27,9 +27,26 @@ export function PosterBackdrop({ palette, children, className = '' }: { palette:
   );
 }
 
-/** Motif illustrations for each Original, built from the project's own architecture. */
+/** Browser mockup for projects with a live public site; generated art for the rest. */
 export function ProjectArt({ project, className = '' }: { project: Project; className?: string }) {
   const a = project.palette.accent;
+  if (project.image) {
+    let host = '';
+    try { host = new URL(project.live ?? '').hostname.replace('www.', ''); } catch { host = ''; }
+    return (
+      <PosterBackdrop palette={project.palette} className={className}>
+        <div className="absolute right-[5%] top-1/2 w-[64%] max-w-[440px] -translate-y-1/2 -rotate-3 overflow-hidden rounded-xl shadow-[0_36px_70px_-18px_rgba(0,0,0,0.75)] ring-1 ring-white/25">
+          <div className="flex items-center gap-1.5 bg-[#141419] px-3 py-2">
+            <span className="h-2 w-2 rounded-full bg-[#ff5f57]" />
+            <span className="h-2 w-2 rounded-full bg-[#febc2e]" />
+            <span className="h-2 w-2 rounded-full bg-[#28c840]" />
+            <span className="ml-2 flex-1 truncate rounded bg-white/10 px-2 py-0.5 text-[9px] font-medium tracking-wide text-white/70">{host}</span>
+          </div>
+          <img src={project.image} alt={`${project.title} — live website screenshot`} loading="lazy" className="block aspect-[16/10] w-full bg-white object-cover object-top" />
+        </div>
+      </PosterBackdrop>
+    );
+  }
   return (
     <PosterBackdrop palette={project.palette} className={className}>
       <svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" className="absolute inset-0 h-full w-full" aria-hidden>
