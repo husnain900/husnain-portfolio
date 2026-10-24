@@ -29,6 +29,33 @@ export const experience = [
 export type Metric = { value: string; label: string };
 export type Project = { id: string; title: string; year: string; genre: string; logline: string; stack: string[]; build: string[]; features: string[]; metrics: Metric[]; github?: string; live?: string; palette: Palette; motif: 'shield' | 'flow' | 'tenants' };
 export const projects: Project[] = [
+  { id: 'couchy', title: 'Couchy', year: '2025', genre: 'Shopify • Sofa Store (UK)',
+    logline: 'A live UK sofa store — corner, U-shape and recliner ranges with shop-by-type and shop-by-model browsing, rated 4.9 from 1,884 reviews.',
+    stack: ['Shopify', 'Liquid', 'Theme Customization'], build: ['Developed the Shopify storefront for a UK sofa retailer — hero, shop-by-type and shop-by-model carousels, featured products and Shop the Room sections.'], features: ['Free UK delivery & 0% finance messaging', 'Shop by sofa type / model', 'Delivery, warranty & returns FAQs'], metrics: [{ value: '4.9★', label: '1,884 reviews' }, { value: '30-day', label: 'Returns' }], live: 'https://couchy.co.uk/', palette: ember, motif: 'flow' },
+  { id: 'gamzo-outlet', title: 'Gamzo Outlet', year: '2025', genre: 'Shopify • Sofa Store (UK)',
+    logline: 'A direct-to-home UK sofa store — sofas from £289 with bestseller rails, shop-by-colour and customer-home galleries, rated 4.87/5 from 708 reviews.',
+    stack: ['Shopify', 'Liquid', 'Theme Customization'], build: ['Built the storefront for a UK sofa outlet — hero carousel, shop-by-type and shop-by-colour navigation and a Bestsellers This Month rail with colour options.'], features: ['Shop sofas by type & colour', 'Bestsellers with sale pricing', 'Shop The Look & customer photos'], metrics: [{ value: '4.87/5', label: '708 reviews' }, { value: '£289', label: 'Sofas from' }], live: 'https://www.gamzooutlet.co.uk/', palette: rose, motif: 'shield' },
+  { id: 'honeypot-furniture', title: 'Honeypot Furniture', year: '2025', genre: 'Shopify • Furniture Store (UK)',
+    logline: 'A UK furniture store with Signature, Sleep Series, Classic and Essential collections, flexible finance and a 5-year frame guarantee.',
+    stack: ['Shopify', 'Liquid', 'Theme Customization'], build: ['Developed the storefront for an established UK furniture brand — promotional hero carousel, Best Sellers and New In rails with monthly-payment figures and a flexible-payments section.'], features: ['0% finance (Klarna, Snap Finance, DivideBuy)', 'Collections: Signature, Sleep, Classic, Essential', 'Price-match & 5-year frame guarantee'], metrics: [{ value: '15+ yrs', label: 'Business expertise' }, { value: '0%', label: 'Finance available' }], live: 'https://honeypotfurniture.co.uk/', palette: amber, motif: 'tenants' },
+  { id: 'glossique', title: 'Glossique', year: '2025', genre: 'Shopify • Bedroom Furniture (UK)',
+    logline: 'A high-gloss bedroom furniture store — wardrobes, dressing tables and sofa beds, trusted by 2,000+ UK customers.',
+    stack: ['Shopify', 'Liquid', 'Theme Customization'], build: ['Built the storefront for a modern furniture brand — category tiles with product counts, a featured-product section, verified-buyer reviews and FAQs.'], features: ['Shop by category with counts', 'Express delivery & 1-year warranty badges', 'Verified buyer reviews'], metrics: [{ value: '2,000+', label: 'Customers' }, { value: '5.0★', label: 'Verified reviews' }], live: 'https://glossique.co.uk/', palette: teal, motif: 'tenants' },
+  { id: 'urban-furnishing', title: 'The Urban Furnishing', year: '2025', genre: 'Shopify • Furniture Store (UK)',
+    logline: 'An affordable UK furniture store — high-gloss wardrobes and sofa beds, with 1,000+ product reviews and 1,000+ delivered orders.',
+    stack: ['Shopify', 'Liquid', 'Theme Customization'], build: ['Developed the storefront — hero product carousel, category tiles with counts, top-selling rails with discounts and a dedicated sofa-bed section.'], features: ['Top-selling product rails', 'Special offers section', 'Free UK mainland delivery'], metrics: [{ value: '1k+', label: 'Product reviews' }, { value: '98%', label: 'Satisfied customers' }], live: 'https://theurbanfurnishing.co.uk/', palette: ocean, motif: 'flow' },
+  { id: 'glamora-furniture', title: 'Glamora Furniture', year: '2025', genre: 'Shopify • Furniture Store (UK)',
+    logline: 'A UK furniture store led by sofa beds and wardrobes, with top-picks carousels, cash on delivery and WhatsApp support.',
+    stack: ['Shopify', 'Liquid', 'Theme Customization'], build: ['Built the storefront for a bedroom and living-room furniture brand — offers banner, category tiles and Top Picks / Popular Products carousels with colour options.'], features: ['Cash on delivery & order tracking', 'Discount product carousels', 'WhatsApp support'], metrics: [], live: 'https://glamorafurniture.co.uk/', palette: violet, motif: 'flow' },
+  { id: 'bedding-lodge', title: 'Bedding Lodge', year: '2025', genre: 'Shopify • Bedding & Linen (UK)',
+    logline: 'A premium UK bedding store — sheets, duvet sets, curtains and mattress protectors, with shop-by-room browsing and 5-star testimonials.',
+    stack: ['Shopify', 'Liquid', 'Theme Customization'], build: ['Developed the storefront for a home-linen brand — numbered category sections, shop-by-room navigation, best-seller rails and a bedding-help contact form.'], features: ['Shop by room', 'Best-seller products', 'Size, care & delivery FAQs'], metrics: [], live: 'https://beddinglodge.co.uk/', palette: jade, motif: 'tenants' },
+  { id: 'kr-tasker-digital', title: 'KR Tasker Digital', year: '2025', genre: 'Agency Website • UK',
+    logline: 'The website for a UK digital agency offering SEO, PPC, web development and AI automation — 35+ client businesses, £2.3M client revenue generated.',
+    stack: ['Shopify', 'Web Design', 'UI/UX'], build: ['Built the agency website — capability ticker, detailed service sections, a four-step KR-eative Approach, testimonials and a project inquiry form with budget selection.'], features: ['Service & budget inquiry form', 'Client testimonials & results', 'Free-audit call to action'], metrics: [{ value: '35+', label: 'Businesses grown' }, { value: '£2.3M', label: 'Client revenue' }], live: 'https://krtaskerdigital.co.uk/', palette: crimson, motif: 'shield' },
+  { id: 'workfolio', title: 'Workfolio — KR Tasker Tracker', year: '2025', genre: 'Full-Stack • SaaS Web App',
+    logline: 'Employee time-tracking and operations software for remote teams — activity, app usage and privacy-first screenshots in one dashboard, with Windows and Linux apps.',
+    stack: ['Full-Stack Development', 'Dashboard UI', 'Desktop Apps'], build: ['Worked on the product site and dashboard experience for a team-monitoring tool — live productivity metrics, role-based access and downloadable desktop installers.'], features: ['Time & activity tracking dashboard', 'Smart screenshots with privacy blur', 'Windows & Linux installers'], metrics: [], live: 'https://workfolio.krtaskerdigital.com/', palette: ocean, motif: 'shield' },
   { id: 'qubix', title: 'Qubix', year: '2024', genre: 'Shopify • Smartwatch Store',
     logline: 'A smartwatch storefront with variant-rich product pages, a quick-buy section and wishlist, compare and cart drawers.',
     stack: ['Shopify', 'Liquid', 'Theme Customization'], build: ['Customized the Shopify theme for a smartwatch brand — hero, featured-products carousel and a single-product quick-buy section with variant and quantity selectors.', 'Demo storefront — password: 1 (enter it on the password page to browse the store).'], features: ['Variant & quick-buy product pages', 'Wishlist, compare & cart drawers', 'Reviews, blog & app-download sections'], metrics: [], live: 'https://qubix-ui.myshopify.com/', palette: teal, motif: 'flow' },
@@ -100,7 +127,7 @@ export const skillEvidence: Record<string, string[]> = {
   'AI-Assisted Development': ['AI-assisted prototyping and iteration workflow'],
   'MVP Prototyping': ['Service: first-version interfaces and core user journeys'],
   'Performance Review': ['Service: website performance and usability review'],
-  'Landing Pages': ['Service: brand and campaign landing pages'], Shopify: ['Qubix', 'AutoParts', 'PowerUp Gym', 'Glowz Cosmetics', 'Game Rush', 'Pawnique'],
+  'Landing Pages': ['Service: brand and campaign landing pages'], Shopify: ['Couchy', 'Gamzo Outlet', 'Honeypot Furniture', 'Glossique', 'The Urban Furnishing', 'Glamora Furniture', 'Bedding Lodge', 'Qubix', 'AutoParts', 'PowerUp Gym', 'Glowz Cosmetics', 'Game Rush', 'Pawnique'],
   WordPress: ['Technologia', 'Soccer Club', 'Veloura Salon', 'GameRush WP'],
 };
 export type Episode = { code: string; title: string; description: string; tags: string[]; runtime: string; palette: Palette };
@@ -129,7 +156,7 @@ export type IntroSlide = { kicker: string; title: string; lines: string[]; chips
 export const introSlides: IntroSlide[] = [
   { kicker: 'Meet the builder', title: 'Husnain Tanveer', lines: [profile.role, 'Faisalabad, Pakistan'], chips: ['MVPs', 'Web apps', 'Storefronts'] },
   { kicker: 'The approach', title: 'Idea. Prototype. Launch.', lines: ['AI-assisted iteration, hands-on refinement.', 'Clear user journeys and a considered interface.'] },
-  { kicker: 'Selected work', title: '16 Projects & Stores', lines: ['Shopify storefronts, React apps and WordPress sites.', 'Qubix, PowerUp Gym, ERES Trade, Athena Fintech and more.'], chips: ['Shopify', 'React', 'WordPress'] },
+  { kicker: 'Selected work', title: '25 Projects & Stores', lines: ['Live UK client stores, Shopify demos, React apps and WordPress sites.', 'Couchy, Gamzo Outlet, Honeypot Furniture, Workfolio and more.'], chips: ['Shopify', 'React', 'WordPress'] },
   { kicker: 'The next episode', title: 'Let’s Build Yours', lines: [profile.email, profile.phone], chips: ['AI-assisted MVPs', 'Shopify stores', 'React interfaces'] },
 ];
 export type ProfileId = 'husnain' | 'recruiter' | 'developer' | 'creative';
