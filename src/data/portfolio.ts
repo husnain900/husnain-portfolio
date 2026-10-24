@@ -12,15 +12,15 @@ const shot = (u: string) => `https://image.thum.io/get/width/1200/crop/750/noani
 export const profile = {
   fullName: 'Husnain Tanveer', displayName: 'Husnain Tanveer', firstName: 'HUSNAIN',
   seriesTag: 'THE SERIES', originalLabel: 'A HUSNAIN TANVEER ORIGINAL',
-  role: 'Web Developer & AI-Assisted Builder', tagline: ['AI-Assisted Builds', 'React Interfaces', 'Shopify'],
-  intro: 'I’m Husnain Tanveer, a freelance web developer in Faisalabad, Pakistan. I help businesses build Shopify storefronts, React interfaces and focused landing pages, with AI-assisted MVP development for ideas that need a working first version.',
+  role: 'Full-Stack Developer & AI-Powered Builder', tagline: ['Next.js & Full-Stack Apps', 'Shopify Stores', 'AI-Powered Builds'],
+  intro: 'I’m Husnain Tanveer, a full-stack developer in Faisalabad, Pakistan. I build Next.js web apps, custom Shopify stores and complete digital products — frontend, backend and everything between — for clients in the UK and worldwide. My workflow is AI-powered from prototype to production: faster delivery, without cutting corners on code quality.',
   about: 'Good websites make the next step feel simple. I focus on clear user journeys, consistent interfaces and the details that matter on a phone as much as on a desktop. Each build starts with your business goals and moves through feedback, refinement and testing.',
-  summary: 'My background combines frontend work at ASDEV Tech, professional experience with KR TASKER DIGITAL LTD and studies at Riphah International University. Today my service offering brings together React interfaces, Shopify storefronts and AI-assisted prototyping.',
+  summary: 'My background combines frontend work at ASDEV Tech, Shopify storefront development for UK brands at KR TASKER DIGITAL LTD and studies at Riphah International University. Today I work across the full stack — Next.js interfaces, Node.js backends and Shopify stores — with an AI-powered workflow from first prototype to launch.',
   location: 'Faisalabad, Pakistan', email: 'husnain.tanvee123@gmail.com',
   phone: '+92 300 6618392', phoneHref: 'tel:+923006618392',
   links: { linkedin: 'https://www.linkedin.com/in/husnain-tanveer-589556237/', whatsapp: 'https://wa.me/923006618392', github: 'https://github.com/husnain900' },
   portrait: { src: `${import.meta.env.BASE_URL}assets/portrait-720.webp`, srcSet: `${import.meta.env.BASE_URL}assets/portrait-420.webp 420w, ${import.meta.env.BASE_URL}assets/portrait-720.webp 720w, ${import.meta.env.BASE_URL}assets/portrait-1100.webp 1100w`, alt: 'Husnain Tanveer in a black suit' },
-  interests: ['AI-assisted development', 'Product experiences', 'E-commerce'],
+  interests: ['AI-powered development', 'Next.js & SaaS products', 'E-commerce'],
 };
 export const education = [{ school: 'Riphah International University', place: 'Pakistan', degree: 'University studies', period: '2021 – 2023', score: '' }];
 export const experience = [
@@ -107,29 +107,35 @@ export const projects: Project[] = [
     stack: ['WordPress', 'Elementor', 'Custom Theme'], build: ['Developed a gaming-focused WordPress build with custom theme styling and responsive page layouts.'], features: ['Custom theme', 'Responsive layouts', 'Easy content management'], metrics: [], live: 'https://gamerush.uiparadox.com/', palette: violet, motif: 'tenants' },
 ];
 export const services = [
-  { title: 'AI-Assisted MVP Builds', number: '01', text: 'Move from an idea to a working first version. Define the essential user journeys, build an interactive prototype and refine it through feedback, with AI assisting the development workflow.', tags: ['Idea to prototype', 'Core user flows', 'Iterative delivery'] },
-  { title: 'React Apps & Dashboards', number: '02', text: 'Give users a clear way to work with your product. Build responsive interfaces with reusable components, useful interactions and considered loading, empty and error states.', tags: ['React', 'Tailwind CSS', 'Product interfaces'] },
-  { title: 'Shopify Store Experiences', number: '03', text: 'Make your storefront feel like your brand. Shape product pages, collections and custom theme sections around an easy mobile shopping journey.', tags: ['Theme customization', 'Custom sections', 'Product discovery'] },
-  { title: 'Websites That Drive Action', number: '04', text: 'Launch a business website or campaign landing page with a clear message, strong visual hierarchy and a direct path to an enquiry, booking or purchase.', tags: ['Brand websites', 'Launch pages', 'Enquiry journeys'] },
-  { title: 'Prototype to Launch', number: '05', text: 'Take an AI-generated draft or an unfinished build through the details it still needs: consistent components, responsive layouts, working interactions and a practical release checklist.', tags: ['AI-generated drafts', 'Code refinement', 'Launch preparation'] },
+  { title: 'Next.js Web Apps & SaaS', number: '01', text: 'Modern web applications built on Next.js and TypeScript — server-rendered, SEO-first and fast on every device. Dashboards, SaaS products and business platforms with authentication, payments and admin panels built in.', tags: ['Next.js / TypeScript', 'SSR & SEO-first', 'SaaS & dashboards'] },
+  { title: 'Shopify Store Experiences', number: '02', text: 'Make your storefront feel like your brand. Custom Liquid themes and sections, product pages and collections shaped around an easy mobile shopping journey — plus headless Shopify builds for brands that outgrow a theme.', tags: ['Theme customization', 'Custom sections', 'Headless / Hydrogen'] },
+  { title: 'Full-Stack Development & APIs', number: '03', text: 'The engine behind the interface: Node.js backends, REST APIs, databases and third-party integrations. Secure authentication, payment flows and data models that scale with your product.', tags: ['Node.js / Express', 'PostgreSQL / MongoDB', 'APIs & integrations'] },
+  { title: 'AI-Powered Builds & Automation', number: '04', text: 'Expert-level AI-assisted development — high-level vibe coding with senior-level refinement. I use advanced AI tooling to prototype in hours and ship production-grade code faster, and I can add AI features like chat support and content automation to your store or app.', tags: ['AI-accelerated delivery', 'AI features & chatbots', 'Workflow automation'] },
+  { title: 'React Apps & Dashboards', number: '05', text: 'Responsive React interfaces with reusable components, useful interactions and considered loading, empty and error states — the front end your product deserves, built with TypeScript.', tags: ['React / TypeScript', 'Tailwind CSS', 'Product interfaces'] },
   { title: 'Redesign & Performance', number: '06', text: 'Improve the website you already have. Review slow screens and awkward user journeys, refine the interface and check the changes across mobile and desktop.', tags: ['UX improvements', 'Performance review', 'Responsive fixes'] },
 ];
 export type Skill = { name: string; mono: string; note?: string };
 export type SkillCategory = { id: string; title: string; subtitle: string; skills: Skill[] };
 export const skillCategories: SkillCategory[] = [
-  { id: 'frontend', title: 'Frontend', subtitle: 'Interactive experiences', skills: [{ name: 'React', mono: 'Re' }, { name: 'HTML', mono: 'Ht' }, { name: 'CSS', mono: 'Cs' }] },
+  { id: 'frontend', title: 'Frontend', subtitle: 'Modern web interfaces', skills: [{ name: 'Next.js', mono: 'Nx' }, { name: 'React', mono: 'Re' }, { name: 'TypeScript', mono: 'Ts' }] },
+  { id: 'backend', title: 'Backend', subtitle: 'Servers, APIs & data', skills: [{ name: 'Node.js', mono: 'No' }, { name: 'Express', mono: 'Ex' }, { name: 'PostgreSQL', mono: 'Pg' }, { name: 'MongoDB', mono: 'Mo' }] },
   { id: 'styling', title: 'UI & Styling', subtitle: 'Consistent product interfaces', skills: [{ name: 'Tailwind CSS', mono: 'Tw' }, { name: 'Material UI', mono: 'Mu' }, { name: 'Responsive Design', mono: 'Rd' }] },
-  { id: 'services', title: 'Build Capabilities', subtitle: 'From prototype to launch', skills: [{ name: 'AI-Assisted Development', mono: 'Ai', note: 'Workflow' }, { name: 'MVP Prototyping', mono: 'Mv', note: 'Service' }, { name: 'Shopify', mono: 'Sh', note: 'Service' }, { name: 'WordPress', mono: 'Wp', note: 'Service' }, { name: 'Landing Pages', mono: 'Lp', note: 'Service' }, { name: 'Performance Review', mono: 'Pr', note: 'Service' }] },
+  { id: 'services', title: 'Platforms & AI', subtitle: 'Stores, CMS & AI workflow', skills: [{ name: 'Shopify', mono: 'Sh', note: 'Platform' }, { name: 'Liquid', mono: 'Lq', note: 'Language' }, { name: 'WordPress', mono: 'Wp', note: 'Platform' }, { name: 'AI-Assisted Development', mono: 'Ai', note: 'Workflow' }, { name: 'MVP Prototyping', mono: 'Mv', note: 'Service' }] },
 ];
 export const skillEvidence: Record<string, string[]> = {
-  React: ['React Dashboard', 'ERES International Trade', 'Lucid', 'MyVisa', 'Athena Fintech'], 'Tailwind CSS': ['React Dashboard'], 'Material UI': ['React Dashboard'],
+  'Next.js': ['Full-stack web apps & SaaS dashboards', 'Server-rendered, SEO-first builds'],
+  React: ['React Dashboard', 'ERES International Trade', 'Lucid', 'MyVisa', 'Athena Fintech'],
+  TypeScript: ['Type-safe Next.js & React codebases', 'Workfolio — KR Tasker Tracker'],
+  'Node.js': ['Backend services & API development', 'Workfolio — KR Tasker Tracker'],
+  Express: ['REST APIs & backend services'], PostgreSQL: ['Relational data modelling for web apps'], MongoDB: ['Document data for web apps'],
+  'Tailwind CSS': ['React Dashboard'], 'Material UI': ['React Dashboard'],
   HTML: ['Frontend website development'], CSS: ['Responsive interface styling'],
-  'Responsive Design': ['React interfaces', 'Mobile and desktop layout refinement'],
-  'AI-Assisted Development': ['AI-assisted prototyping and iteration workflow'],
-  'MVP Prototyping': ['Service: first-version interfaces and core user journeys'],
-  'Performance Review': ['Service: website performance and usability review'],
-  'Landing Pages': ['Service: brand and campaign landing pages'], Shopify: ['Couchy', 'Gamzo Outlet', 'Honeypot Furniture', 'Glossique', 'The Urban Furnishing', 'Glamora Furniture', 'Bedding Lodge', 'Qubix', 'AutoParts', 'PowerUp Gym', 'Glowz Cosmetics', 'Game Rush', 'Pawnique'],
+  'Responsive Design': ['Mobile-first interfaces', 'Mobile and desktop layout refinement'],
+  Shopify: ['Couchy', 'Gamzo Outlet', 'Honeypot Furniture', 'Glossique', 'The Urban Furnishing', 'Glamora Furniture', 'Bedding Lodge', 'Qubix', 'AutoParts', 'PowerUp Gym', 'Glowz Cosmetics', 'Game Rush', 'Pawnique'],
+  Liquid: ['Custom Shopify theme sections', 'Qubix', 'AutoParts', 'Glowz Cosmetics'],
   WordPress: ['Technologia', 'Soccer Club', 'Veloura Salon', 'GameRush WP'],
+  'AI-Assisted Development': ['Advanced AI tooling — rapid prototyping to production refinement', 'AI feature integration for stores & apps'],
+  'MVP Prototyping': ['Service: first-version interfaces and core user journeys'],
 };
 export type Episode = { code: string; title: string; description: string; tags: string[]; runtime: string; palette: Palette };
 export type Season = { number: number; title: string; period: string; synopsis: string; episodes: Episode[] };
@@ -147,18 +153,18 @@ export const seasons: Season[] = [
 ];
 export type TopPick = { label: string; title: string; detail: string; palette: Palette };
 export const topPicks: TopPick[] = [
-  { label: 'Frontend', title: 'React', detail: 'Component-based interfaces', palette: ocean },
-  { label: 'Styling', title: 'Tailwind CSS', detail: 'Utility-first UI development', palette: jade },
-  { label: 'Components', title: 'Material UI', detail: 'A consistent UI toolkit', palette: amber },
-  { label: 'Build workflow', title: 'AI-Assisted', detail: 'Prototype, review and refine', palette: crimson },
-  { label: 'Storefronts', title: 'Shopify', detail: 'Your products, thoughtfully presented', palette: jade },
+  { label: 'Frontend', title: 'Next.js', detail: 'Server-rendered React apps', palette: ocean },
+  { label: 'Language', title: 'TypeScript', detail: 'Type-safe, scalable code', palette: jade },
+  { label: 'Backend', title: 'Node.js', detail: 'APIs, auth & payments', palette: amber },
+  { label: 'Storefronts', title: 'Shopify', detail: 'Custom themes & Liquid', palette: crimson },
+  { label: 'Build workflow', title: 'AI-Powered', detail: 'Vibe coding, expertly refined', palette: violet },
 ];
 export type IntroSlide = { kicker: string; title: string; lines: string[]; chips?: string[] };
 export const introSlides: IntroSlide[] = [
-  { kicker: 'Meet the builder', title: 'Husnain Tanveer', lines: [profile.role, 'Faisalabad, Pakistan'], chips: ['MVPs', 'Web apps', 'Storefronts'] },
+  { kicker: 'Meet the builder', title: 'Husnain Tanveer', lines: [profile.role, 'Faisalabad, Pakistan'], chips: ['Next.js', 'Shopify', 'Full-Stack'] },
   { kicker: 'The approach', title: 'Idea. Prototype. Launch.', lines: ['AI-assisted iteration, hands-on refinement.', 'Clear user journeys and a considered interface.'] },
   { kicker: 'Selected work', title: '25 Projects & Stores', lines: ['Live UK client stores, Shopify demos, React apps and WordPress sites.', 'Couchy, Gamzo Outlet, Honeypot Furniture, Workfolio and more.'], chips: ['Shopify', 'React', 'WordPress'] },
-  { kicker: 'The next episode', title: 'Let’s Build Yours', lines: [profile.email, profile.phone], chips: ['AI-assisted MVPs', 'Shopify stores', 'React interfaces'] },
+  { kicker: 'The next episode', title: 'Let’s Build Yours', lines: [profile.email, profile.phone], chips: ['Next.js apps', 'Shopify stores', 'AI-powered builds'] },
 ];
 export type ProfileId = 'husnain' | 'recruiter' | 'developer' | 'creative';
 export type SectionId = 'about' | 'journey' | 'originals' | 'picks' | 'skills' | 'moments' | 'story';
@@ -173,8 +179,8 @@ export const sectionMeta: Record<SectionId, { nav: string; card: string; meta: s
   journey: { nav: 'Journey', card: 'The Journey', meta: 'Background • Process • Next steps', palette: amber },
   originals: { nav: 'Work', card: 'Selected Work', meta: `${projects.length} Featured ${projects.length === 1 ? 'Project' : 'Projects'} • Shopify • React • WordPress`, palette: crimson },
   picks: { nav: 'Highlights', card: 'In the Spotlight', meta: 'Tools & capabilities', palette: jade },
-  skills: { nav: 'Toolkit', card: 'The Toolkit', meta: 'React • UI • AI-assisted workflow', palette: ocean },
-  moments: { nav: 'Services', card: 'Build Your Next Product', meta: 'MVPs • Web apps • Shopify', palette: crimson },
+  skills: { nav: 'Toolkit', card: 'The Toolkit', meta: 'Next.js • Full-Stack • AI-powered', palette: ocean },
+  moments: { nav: 'Services', card: 'Build Your Next Product', meta: 'Next.js • Shopify • SaaS', palette: crimson },
   story: { nav: 'Profile', card: 'The Full Story', meta: 'Experience & background', palette: amber },
 };
 
