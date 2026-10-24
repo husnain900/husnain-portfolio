@@ -8,10 +8,12 @@ export const profile = {
   fullName: 'Husnain Tanveer', displayName: 'Husnain Tanveer', firstName: 'HUSNAIN',
   seriesTag: 'THE SERIES', originalLabel: 'A HUSNAIN TANVEER ORIGINAL',
   role: 'Web Developer & AI-Assisted Builder', tagline: ['AI-Assisted Builds', 'React Interfaces', 'Shopify'],
-  intro: 'Have an idea worth building? I help turn it into a working web experience: an MVP to test your concept, a React interface, a Shopify storefront or a sharper website for your business. My approach combines AI-assisted iteration with hands-on development, careful design and testing before launch.',
+  intro: 'I’m Husnain Tanveer, a freelance web developer in Faisalabad, Pakistan. I help businesses build Shopify storefronts, React interfaces and focused landing pages, with AI-assisted MVP development for ideas that need a working first version.',
+  about: 'Good websites make the next step feel simple. I focus on clear user journeys, consistent interfaces and the details that matter on a phone as much as on a desktop. Each build starts with your business goals and moves through feedback, refinement and testing.',
+  summary: 'My background combines frontend work at ASDEV Tech, professional experience with KR TASKER DIGITAL LTD and studies at Riphah International University. Today my service offering brings together React interfaces, Shopify storefronts and AI-assisted prototyping.',
   location: 'Faisalabad, Pakistan', email: 'husnain.tanvee123@gmail.com',
   phone: '+92 300 6618392', phoneHref: 'tel:+923006618392',
-  links: { linkedin: 'https://www.linkedin.com/in/husnain-tanveer-589556237/', whatsapp: 'https://wa.me/923006618392' },
+  links: { linkedin: 'https://www.linkedin.com/in/husnain-tanveer-589556237/', whatsapp: 'https://wa.me/923006618392', github: 'https://github.com/husnain900' },
   portrait: { src: `${import.meta.env.BASE_URL}assets/portrait-720.webp`, srcSet: `${import.meta.env.BASE_URL}assets/portrait-420.webp 420w, ${import.meta.env.BASE_URL}assets/portrait-720.webp 720w, ${import.meta.env.BASE_URL}assets/portrait-1100.webp 1100w`, alt: 'Husnain Tanveer in a black suit' },
   interests: ['AI-assisted development', 'Product experiences', 'E-commerce'],
 };
@@ -32,7 +34,7 @@ export const services = [
   { title: 'React Apps & Dashboards', number: '02', text: 'Give users a clear way to work with your product. Build responsive interfaces with reusable components, useful interactions and considered loading, empty and error states.', tags: ['React', 'Tailwind CSS', 'Product interfaces'] },
   { title: 'Shopify Store Experiences', number: '03', text: 'Make your storefront feel like your brand. Shape product pages, collections and custom theme sections around an easy mobile shopping journey.', tags: ['Theme customization', 'Custom sections', 'Product discovery'] },
   { title: 'Websites That Drive Action', number: '04', text: 'Launch a business website or campaign landing page with a clear message, strong visual hierarchy and a direct path to an enquiry, booking or purchase.', tags: ['Brand websites', 'Launch pages', 'Enquiry journeys'] },
-  { title: 'Prototype to Launch', number: '05', text: 'Take an AI-generated draft or an unfinished build through the details it still needs: consistent components, responsive layouts, working interactions and a practical release checklist.', tags: ['Vibe-coded prototypes', 'Code refinement', 'Launch preparation'] },
+  { title: 'Prototype to Launch', number: '05', text: 'Take an AI-generated draft or an unfinished build through the details it still needs: consistent components, responsive layouts, working interactions and a practical release checklist.', tags: ['AI-generated drafts', 'Code refinement', 'Launch preparation'] },
   { title: 'Redesign & Performance', number: '06', text: 'Improve the website you already have. Review slow screens and awkward user journeys, refine the interface and check the changes across mobile and desktop.', tags: ['UX improvements', 'Performance review', 'Responsive fixes'] },
 ];
 export type Skill = { name: string; mono: string; note?: string };
@@ -57,7 +59,7 @@ export const seasons: Season[] = [
   { number: 1, title: 'The Foundation', period: '2021 – 2023', synopsis: 'The education chapter.', episodes: [{ code: 'S01 E01', title: 'University Years', description: 'Studies at Riphah International University.', tags: ['Riphah International University'], runtime: '2021 – 2023', palette: amber }] },
   { number: 2, title: 'The Work', period: 'Professional experience', synopsis: 'Turning interface ideas into websites.', episodes: [
     { code: 'S02 E01', title: 'Frontend in Practice', description: 'Frontend web development at ASDEV Tech.', tags: ['Frontend', 'Responsive websites'], runtime: 'ASDEV Tech', palette: ocean },
-    { code: 'S02 E02', title: 'The Digital Chapter', description: 'Professional experience with KR TASKER DIGITAL LTD.', tags: ['Web', 'Digital'], runtime: 'KR TASKER DIGITAL', palette: crimson },
+    { code: 'S02 E02', title: 'The Digital Chapter', description: 'Professional experience with KR TASKER DIGITAL LTD.', tags: ['Web', 'Digital'], runtime: 'KR TASKER DIGITAL LTD', palette: crimson },
   ] },
   { number: 3, title: 'Your Next Chapter', period: 'Let’s build', synopsis: 'A simple path from your idea to a website.', episodes: [
     { code: 'S03 E01', title: 'Start with the Brief', description: 'Tell me what your business needs, who the site is for and what a successful launch looks like.', tags: ['Goals', 'Scope'], runtime: 'Discovery', palette: jade },

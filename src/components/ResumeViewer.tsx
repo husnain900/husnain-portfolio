@@ -24,7 +24,7 @@ export function ResumeSheet() {
     <h3 className="mt-3 font-display text-5xl tracking-wide text-bone">{profile.fullName}</h3>
     <p className="mt-2 text-sm text-mist">{profile.role} · {profile.location}</p>
     <div className="mt-5 flex flex-wrap gap-x-5 gap-y-3 text-xs text-bone"><a className="break-all hover:text-crimson-2" href={`mailto:${profile.email}`}>{profile.email}</a><a href={profile.phoneHref}>{profile.phone}</a><a href={profile.links.linkedin} target="_blank" rel="noreferrer">LinkedIn ↗</a></div>
-    <p className="mt-6 text-sm leading-relaxed text-mist">{profile.intro}</p>
+    <p className="mt-6 text-sm leading-relaxed text-mist">{profile.summary}</p>
     <div className="grid gap-x-9 md:grid-cols-2"><div>
       <H>Experience</H>
       {experience.map(x => <div className="mb-5" key={x.company}><p className="font-semibold text-bone">{x.company}</p><p className="mt-1 text-xs text-crimson-2">{x.role}</p><p className="mt-2 text-xs leading-relaxed text-mist">{x.points.join(' ')}</p></div>)}

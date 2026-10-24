@@ -30,7 +30,8 @@ const STORAGE_KEY = 'husnain-series-profile';
 
 function readStoredProfile(): ProfileId | null {
   try {
-    const v = sessionStorage.getItem(STORAGE_KEY);
+    const requested = new URLSearchParams(window.location.search).get('profile');
+    const v = requested === 'client' ? 'creative' : requested ?? localStorage.getItem(STORAGE_KEY);
     return viewerProfiles.some((p) => p.id === v) ? (v as ProfileId) : null;
   } catch {
     return null;
@@ -47,7 +48,7 @@ export default function App() {
 
 function Series() {
   const stored = readStoredProfile();
-  const [stage, setStage] = useState<Stage>(stored ? 'home' : 'opening');
+  const [stage, setStage] = useState<Stage>('home');
   const [profileId, setProfileId] = useState<ProfileId>(stored ?? 'husnain');
   const [playing, setPlaying] = useState(false);
   const [project, setProject] = useState<Project | null>(null);
@@ -67,7 +68,7 @@ function Series() {
     (id: ProfileId) => {
       setProfileId(id);
       try {
-        sessionStorage.setItem(STORAGE_KEY, id);
+        localStorage.setItem(STORAGE_KEY, id);
       } catch {
         /* storage unavailable — profile simply won't persist */
       }
