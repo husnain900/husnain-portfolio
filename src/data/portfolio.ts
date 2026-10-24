@@ -4,6 +4,10 @@ const crimson: Palette = { from: '#24060b', via: '#6e0d1d', to: '#09070a', accen
 const amber: Palette = { from: '#1c1003', via: '#6b3c06', to: '#0a0806', accent: '#ffb547' };
 const ocean: Palette = { from: '#04121f', via: '#0f4c6e', to: '#05080d', accent: '#4cc9ff' };
 const jade: Palette = { from: '#03150f', via: '#0d5a40', to: '#050a08', accent: '#46e3a8' };
+const violet: Palette = { from: '#12041f', via: '#4c1d95', to: '#08050d', accent: '#a78bfa' };
+const rose: Palette = { from: '#1f0410', via: '#7f1d3f', to: '#0d0508', accent: '#fb7185' };
+const teal: Palette = { from: '#03201c', via: '#0f766e', to: '#050d0c', accent: '#2dd4bf' };
+const ember: Palette = { from: '#1c0a03', via: '#7c2d12', to: '#0a0605', accent: '#fb923c' };
 export const profile = {
   fullName: 'Husnain Tanveer', displayName: 'Husnain Tanveer', firstName: 'HUSNAIN',
   seriesTag: 'THE SERIES', originalLabel: 'A HUSNAIN TANVEER ORIGINAL',
@@ -25,9 +29,54 @@ export const experience = [
 export type Metric = { value: string; label: string };
 export type Project = { id: string; title: string; year: string; genre: string; logline: string; stack: string[]; build: string[]; features: string[]; metrics: Metric[]; github?: string; live?: string; palette: Palette; motif: 'shield' | 'flow' | 'tenants' };
 export const projects: Project[] = [
+  { id: 'qubix', title: 'Qubix', year: '2024', genre: 'Shopify • Smartwatch Store',
+    logline: 'A smartwatch storefront with variant-rich product pages, a quick-buy section and wishlist, compare and cart drawers.',
+    stack: ['Shopify', 'Liquid', 'Theme Customization'], build: ['Customized the Shopify theme for a smartwatch brand — hero, featured-products carousel and a single-product quick-buy section with variant and quantity selectors.', 'Demo storefront — password: 1 (enter it on the password page to browse the store).'], features: ['Variant & quick-buy product pages', 'Wishlist, compare & cart drawers', 'Reviews, blog & app-download sections'], metrics: [], live: 'https://qubix-ui.myshopify.com/', palette: teal, motif: 'flow' },
+  { id: 'autoparts', title: 'AutoParts', year: '2024', genre: 'Shopify • Auto Parts Store',
+    logline: 'A bold auto-parts store with category search, shop-by-car-make browsing, flash sales and weekly deal sections.',
+    stack: ['Shopify', 'Liquid', 'Theme Customization'], build: ['Built the storefront UI for an auto-parts catalog — eight part categories, a shop-by-make section and sale countdown banners.', 'Demo storefront — password: 1 (enter it on the password page to browse the store).'], features: ['Category-filtered search', 'Shop by car make', 'Flash-sale & best-deals sections'], metrics: [], live: 'https://auto-parts-ui.myshopify.com/', palette: crimson, motif: 'shield' },
+  { id: 'powerup-gym', title: 'PowerUp Gym', year: '2024', genre: 'Shopify • Fitness Supplements',
+    logline: 'A supplements store with category cards, rated product rails, limited-edition promos and an offer countdown.',
+    stack: ['Shopify', 'Liquid', 'Theme Customization'], build: ['Customized the theme for a fitness-supplements brand — hero slider, category cards and featured/trending product sections with star ratings.'], features: ['Protein & supplement categories', 'Countdown offer banner', 'Testimonials & fitness blog'], metrics: [], live: 'https://powerup-gym.myshopify.com/', palette: jade, motif: 'shield' },
+  { id: 'glowz', title: 'Glowz Cosmetics', year: '2024', genre: 'Shopify • Beauty & Skincare',
+    logline: 'A soft, editorial beauty store covering skincare, makeup, haircare and fragrance, with sale and new-arrival rails.',
+    stack: ['Shopify', 'Liquid', 'Theme Customization'], build: ['Designed the storefront UI for a cosmetics brand — circular category navigation, marquee headline and featured/trending/new-arrival sections.', 'Demo storefront — password: 1 (enter it on the password page to browse the store).'], features: ['11 beauty categories', 'Sale countdown & promos', 'Testimonials & beauty blog'], metrics: [], live: 'https://glowz-ui.myshopify.com/', palette: rose, motif: 'flow' },
+  { id: 'game-rush-shopify', title: 'Game Rush', year: '2024', genre: 'Shopify • Gaming Gear',
+    logline: 'A dark, neon gaming-gear store with gear category cards, best-seller carousels, weekly deals and a VR feature section.',
+    stack: ['Shopify', 'Liquid', 'Theme Customization'], build: ['Built a gaming storefront UI — dual hero slides, featured-gear category cards and product carousels for keyboards, headsets, chairs and more.', 'Demo storefront — password: 1 (enter it on the password page to browse the store).'], features: ['Gaming gear categories', 'Weekly deals section', 'Gamer reviews & blog'], metrics: [], live: 'https://game-rush-ui.myshopify.com/', palette: violet, motif: 'tenants' },
+  { id: 'pawnique', title: 'Pawnique', year: '2024', genre: 'Shopify • Vintage & Pawn Store',
+    logline: 'A vintage pawn-shop storefront with category grids for guitars, jewelry, typewriters and collectibles, plus best-seller rails.',
+    stack: ['Shopify', 'Liquid', 'Theme Customization'], build: ['Customized the theme for a pre-owned valuables store — prominent search, category counts and featured/best-seller product grids.', 'Demo storefront — password: 1 (enter it on the password page to browse the store).'], features: ['Shop-by-category with item counts', 'Featured & best-seller grids', 'Testimonials & pawn-advice blog'], metrics: [], live: 'https://pawnhub-ui.myshopify.com/', palette: amber, motif: 'tenants' },
+  { id: 'eres-trade', title: 'ERES International Trade', year: '2023', genre: 'React • Corporate Website',
+    logline: 'A bilingual corporate site for a Korea–MENA trade company sourcing 200+ Korean brands across 22 countries.',
+    stack: ['React', 'JavaScript', 'CSS'], build: ['Developed the React front end — company story with a Korea-to-MENA map, core values, partner benefits and app-download sections for KoCart and Diwan.'], features: ['English / Korean language switcher', 'Partner & logistics sections', 'App download with QR codes'], metrics: [], live: 'https://6578678c3dc55c6835bc9c38--glistening-chebakia-f5308d.netlify.app/', palette: amber, motif: 'flow' },
+  { id: 'lucid', title: 'Lucid', year: '2023', genre: 'React • Agency Website',
+    logline: 'A bilingual creative-agency site with services, portfolio, testimonials and a quote-request contact form.',
+    stack: ['React', 'JavaScript', 'CSS'], build: ['Built the agency front end — services for design, web development and marketing, client testimonials and a full contact form.'], features: ['English / Arabic language switcher', 'Services & portfolio pages', 'Get-a-quote contact form'], metrics: [], live: 'https://658015341ade91173046d5ae--sprightly-blancmange-f630a4.netlify.app/', palette: ocean, motif: 'tenants' },
+  { id: 'myvisa', title: 'MyVisa', year: '2023', genre: 'React • Travel Services App',
+    logline: 'An Arabic visa-services app interface with destination pickers and booking cards for Umrah, tourist, family and work visas.',
+    stack: ['React', 'JavaScript', 'CSS'], build: ['Developed a mobile-style React interface — destination selection, visa-type booking cards and services such as flight and hotel booking, insurance and translation.'], features: ['Arabic RTL interface', 'Visa booking cards', 'Cart, search & bottom navigation'], metrics: [], live: 'https://6582bbe86ec5a6146734d42a--extraordinary-melba-9582a3.netlify.app/', palette: crimson, motif: 'flow' },
+  { id: 'athena-fintech', title: 'Athena Fintech', year: '2024', genre: 'React • Fintech Website',
+    logline: 'A B2B fintech site for trading and brokerage technology — hosting, trading platforms, payments and aggregated liquidity.',
+    stack: ['React', 'JavaScript', 'CSS'], build: ['Built the front end for a brokerage-technology provider — hosting, trading, payment and liquidity pages with a dark corporate design.'], features: ['Trading-technology service pages', 'Brand & web capability sections', 'London & Seoul office presence'], metrics: [], live: 'https://fathena-hostings.netlify.app/', palette: violet, motif: 'shield' },
+  { id: 'dream-protocol', title: 'Dream Protocol', year: '2024', genre: 'React • AI Product Landing',
+    logline: 'A cinematic landing page for an AI-art product, with a fantasy artwork grid and glowing editorial typography.',
+    stack: ['React', 'JavaScript', 'CSS'], build: ['Designed a dark, game-style splash experience for an AI-art concept — artwork grid backdrop with login and sign-up entry points.'], features: ['AI-art visual grid', 'Cinematic hero typography', 'Login / sign-up entry'], metrics: [], live: 'https://dream-protocol.netlify.app/', palette: violet, motif: 'flow' },
   { id: 'react-dashboard', title: 'React Dashboard', year: '2024', genre: 'Frontend • Dashboard',
     logline: 'A dashboard interface built with React, Tailwind CSS and Material UI.',
     stack: ['React', 'Tailwind CSS', 'Material UI'], build: ['Developed a React dashboard using Tailwind CSS and Material UI.'], features: ['Component-based interface', 'Utility-first styling', 'Material UI components'], metrics: [], palette: ocean, motif: 'tenants' },
+  { id: 'technologia', title: 'Technologia', year: '2024', genre: 'WordPress • Agency Website',
+    logline: 'A dark, high-tech digital-agency site with a filterable portfolio, a five-step process and a consultation form.',
+    stack: ['WordPress', 'Elementor', 'Custom Theme'], build: ['Built the WordPress site for a digital agency — consulting, web development and marketing services with portfolio filtering and client feedback sections.'], features: ['Filterable portfolio showcase', 'Consultation form with file upload', 'Blog & newsletter'], metrics: [], live: 'https://technologia.uiparadox.com/', palette: ocean, motif: 'shield' },
+  { id: 'soccer-club', title: 'Soccer Club', year: '2024', genre: 'WordPress • Sports Club & Shop',
+    logline: 'A football-club site combining fixtures, a league points table, player profiles, ticket cards and a merchandise shop.',
+    stack: ['WordPress', 'Elementor', 'WooCommerce'], build: ['Developed the club website — upcoming-match countdown, league table, player profiles and a WooCommerce merchandise shop with cart and checkout.'], features: ['Fixtures & points table', 'Player profiles', 'Merchandise shop with checkout'], metrics: [], live: 'https://soccerclub.uiparadox.com/', palette: ember, motif: 'shield' },
+  { id: 'veloura', title: 'Veloura Salon', year: '2024', genre: 'WordPress • Salon & Wellness',
+    logline: 'An elegant salon and massage site with service pricing plans, before-and-after galleries and an appointment booking form.',
+    stack: ['WordPress', 'Elementor', 'Custom Theme'], build: ['Built the wellness-salon site — services, pricing plans, testimonials and a booking form with date and time selection.'], features: ['Appointment booking form', 'Pricing plans', 'Before & after gallery'], metrics: [], live: 'https://veloura.uiparadox.com/', palette: jade, motif: 'flow' },
+  { id: 'gamerush-wp', title: 'GameRush WP', year: '2024', genre: 'WordPress • Gaming Website',
+    logline: 'A gaming website built on WordPress with a custom theme and Elementor layouts.',
+    stack: ['WordPress', 'Elementor', 'Custom Theme'], build: ['Developed a gaming-focused WordPress build with custom theme styling and responsive page layouts.'], features: ['Custom theme', 'Responsive layouts', 'Easy content management'], metrics: [], live: 'https://gamerush.uiparadox.com/', palette: violet, motif: 'tenants' },
 ];
 export const services = [
   { title: 'AI-Assisted MVP Builds', number: '01', text: 'Move from an idea to a working first version. Define the essential user journeys, build an interactive prototype and refine it through feedback, with AI assisting the development workflow.', tags: ['Idea to prototype', 'Core user flows', 'Iterative delivery'] },
@@ -42,16 +91,17 @@ export type SkillCategory = { id: string; title: string; subtitle: string; skill
 export const skillCategories: SkillCategory[] = [
   { id: 'frontend', title: 'Frontend', subtitle: 'Interactive experiences', skills: [{ name: 'React', mono: 'Re' }, { name: 'HTML', mono: 'Ht' }, { name: 'CSS', mono: 'Cs' }] },
   { id: 'styling', title: 'UI & Styling', subtitle: 'Consistent product interfaces', skills: [{ name: 'Tailwind CSS', mono: 'Tw' }, { name: 'Material UI', mono: 'Mu' }, { name: 'Responsive Design', mono: 'Rd' }] },
-  { id: 'services', title: 'Build Capabilities', subtitle: 'From prototype to launch', skills: [{ name: 'AI-Assisted Development', mono: 'Ai', note: 'Workflow' }, { name: 'MVP Prototyping', mono: 'Mv', note: 'Service' }, { name: 'Shopify', mono: 'Sh', note: 'Service' }, { name: 'Landing Pages', mono: 'Lp', note: 'Service' }, { name: 'Performance Review', mono: 'Pr', note: 'Service' }] },
+  { id: 'services', title: 'Build Capabilities', subtitle: 'From prototype to launch', skills: [{ name: 'AI-Assisted Development', mono: 'Ai', note: 'Workflow' }, { name: 'MVP Prototyping', mono: 'Mv', note: 'Service' }, { name: 'Shopify', mono: 'Sh', note: 'Service' }, { name: 'WordPress', mono: 'Wp', note: 'Service' }, { name: 'Landing Pages', mono: 'Lp', note: 'Service' }, { name: 'Performance Review', mono: 'Pr', note: 'Service' }] },
 ];
 export const skillEvidence: Record<string, string[]> = {
-  React: ['React Dashboard'], 'Tailwind CSS': ['React Dashboard'], 'Material UI': ['React Dashboard'],
+  React: ['React Dashboard', 'ERES International Trade', 'Lucid', 'MyVisa', 'Athena Fintech'], 'Tailwind CSS': ['React Dashboard'], 'Material UI': ['React Dashboard'],
   HTML: ['Frontend website development'], CSS: ['Responsive interface styling'],
   'Responsive Design': ['React interfaces', 'Mobile and desktop layout refinement'],
   'AI-Assisted Development': ['AI-assisted prototyping and iteration workflow'],
   'MVP Prototyping': ['Service: first-version interfaces and core user journeys'],
   'Performance Review': ['Service: website performance and usability review'],
-  'Landing Pages': ['Service: brand and campaign landing pages'], Shopify: ['Service: storefront and theme customization'],
+  'Landing Pages': ['Service: brand and campaign landing pages'], Shopify: ['Qubix', 'AutoParts', 'PowerUp Gym', 'Glowz Cosmetics', 'Game Rush', 'Pawnique'],
+  WordPress: ['Technologia', 'Soccer Club', 'Veloura Salon', 'GameRush WP'],
 };
 export type Episode = { code: string; title: string; description: string; tags: string[]; runtime: string; palette: Palette };
 export type Season = { number: number; title: string; period: string; synopsis: string; episodes: Episode[] };
@@ -79,7 +129,7 @@ export type IntroSlide = { kicker: string; title: string; lines: string[]; chips
 export const introSlides: IntroSlide[] = [
   { kicker: 'Meet the builder', title: 'Husnain Tanveer', lines: [profile.role, 'Faisalabad, Pakistan'], chips: ['MVPs', 'Web apps', 'Storefronts'] },
   { kicker: 'The approach', title: 'Idea. Prototype. Launch.', lines: ['AI-assisted iteration, hands-on refinement.', 'Clear user journeys and a considered interface.'] },
-  { kicker: 'Selected work', title: 'React Dashboard', lines: ['A component-based dashboard interface.', 'React, Tailwind CSS and Material UI.'], chips: ['React', 'Tailwind CSS', 'Material UI'] },
+  { kicker: 'Selected work', title: '16 Projects & Stores', lines: ['Shopify storefronts, React apps and WordPress sites.', 'Qubix, PowerUp Gym, ERES Trade, Athena Fintech and more.'], chips: ['Shopify', 'React', 'WordPress'] },
   { kicker: 'The next episode', title: 'Let’s Build Yours', lines: [profile.email, profile.phone], chips: ['AI-assisted MVPs', 'Shopify stores', 'React interfaces'] },
 ];
 export type ProfileId = 'husnain' | 'recruiter' | 'developer' | 'creative';
@@ -93,7 +143,7 @@ export const viewerProfiles: { id: ProfileId; name: string; blurb: string; color
 export const sectionMeta: Record<SectionId, { nav: string; card: string; meta: string; palette: Palette }> = {
   about: { nav: 'About', card: 'Meet Husnain', meta: 'The Pilot • A little about me', palette: ocean },
   journey: { nav: 'Journey', card: 'The Journey', meta: 'Background • Process • Next steps', palette: amber },
-  originals: { nav: 'Work', card: 'Selected Work', meta: `${projects.length} Featured ${projects.length === 1 ? 'Project' : 'Projects'} • React`, palette: crimson },
+  originals: { nav: 'Work', card: 'Selected Work', meta: `${projects.length} Featured ${projects.length === 1 ? 'Project' : 'Projects'} • Shopify • React • WordPress`, palette: crimson },
   picks: { nav: 'Highlights', card: 'In the Spotlight', meta: 'Tools & capabilities', palette: jade },
   skills: { nav: 'Toolkit', card: 'The Toolkit', meta: 'React • UI • AI-assisted workflow', palette: ocean },
   moments: { nav: 'Services', card: 'Build Your Next Product', meta: 'MVPs • Web apps • Shopify', palette: crimson },
