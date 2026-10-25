@@ -44,9 +44,9 @@ export default function Hero({ onPlay, onResume, profileId }: { onPlay: () => vo
   ];
 
   const floating = [
-    { text: 'React & Tailwind', sub: 'Product interfaces', pos: 'left-[2%] top-[30%]', depth: 1 },
+    { text: 'Next.js & TypeScript', sub: 'Full-stack web apps', pos: 'left-[2%] top-[30%]', depth: 1 },
     { text: 'Shopify', sub: 'Storefront services', pos: 'right-[0%] top-[18%]', depth: -1 },
-    { text: 'AI-Assisted Builds', sub: 'Prototype · Refine · Launch', pos: 'right-[4%] bottom-[24%]', depth: 0.6 },
+    { text: 'AI-Powered Builds', sub: 'Prototype · Refine · Launch', pos: 'right-[4%] bottom-[24%]', depth: 0.6 },
   ];
 
   return (
@@ -122,7 +122,7 @@ export default function Hero({ onPlay, onResume, profileId }: { onPlay: () => vo
         </motion.div>
         <motion.h1 variants={item} className="font-display leading-[0.82] tracking-[0.02em] text-bone" style={{ fontSize: 'clamp(4rem, 12vw, 11rem)' }}>
           <span className="shimmer-text">{profile.firstName}</span>
-          <span className="sr-only"> Tanveer — Shopify &amp; React Developer</span>
+          <span className="sr-only"> Tanveer — Shopify &amp; Next.js Developer · Full-Stack</span>
         </motion.h1>
         <motion.p variants={item} className="mt-1 font-sans text-sm font-bold tracking-[0.62em] text-crimson-2 sm:text-base">
           {profile.seriesTag}
