@@ -30,7 +30,7 @@ export function ResumeSheet() {
       {experience.map(x => <div className="mb-5" key={x.company}><p className="font-semibold text-bone">{x.company}</p><p className="mt-1 text-xs text-crimson-2">{x.role}</p><p className="mt-2 text-xs leading-relaxed text-mist">{x.points.join(' ')}</p></div>)}
       <H>Education</H>{education.map(e => <div key={e.school}><p className="text-sm font-semibold text-bone">{e.school}</p><p className="mt-2 text-xs text-mist">{e.period}</p></div>)}
     </div><div>
-      <H>Selected Work</H>{projects.map(p => <div key={p.id} className="mb-4"><p className="text-sm font-semibold text-bone">{p.title}</p><p className="mt-1 text-xs text-mist">{p.stack.join(' · ')}</p></div>)}
+      <H>Selected Work</H>{projects.slice(0, 8).map(p => <div key={p.id} className="mb-4"><p className="text-sm font-semibold text-bone">{p.title}</p><p className="mt-1 text-xs text-mist">{p.stack.join(' · ')}</p></div>)}<p className="text-xs text-mist">+ {projects.length - 8} more projects in the Selected Work section above.</p>
       <H>Toolkit & Services</H>{skillCategories.map(c => <p key={c.id} className="mb-3 text-xs leading-relaxed text-mist"><span className="font-semibold text-bone">{c.title}: </span>{c.skills.map(s => s.name).join(', ')}</p>)}
     </div></div>
   </article>;
