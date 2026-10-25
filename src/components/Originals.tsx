@@ -23,7 +23,7 @@ function Intro() {
       </p>
       <RevealText as="h2" text="SELECTED WORK" className="font-display text-[clamp(3.5rem,9vw,8rem)] leading-[0.85] text-bone" />
       <p className="mt-4 max-w-sm text-[15px] leading-relaxed text-mist">
-        A closer look at my React dashboard work. Explore the interface, the component structure and the tools behind the build.
+        25 live builds — UK Shopify stores, full-stack web apps and WordPress sites. Open any title for the story, the stack and the results behind the build.
       </p>
       <p className="mt-6 hidden text-xs tracking-[0.24em] text-smoke lg:block">SCROLL TO BROWSE →</p>
     </div>
