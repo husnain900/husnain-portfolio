@@ -16,6 +16,7 @@ import TopPicks from './components/TopPicks';
 import Skills from './components/Skills';
 import Services from './components/Services';
 import ResumeSection from './components/ResumeViewer';
+import ContactForm from './components/ContactForm';
 import FinalCTA from './components/FinalCTA';
 import { EASE } from './components/fx';
 
@@ -125,6 +126,7 @@ function Series() {
                 {sections[id]}
               </Scene>
             ))}
+            <ContactForm />
             <FinalCTA onReplay={() => setStage('opening')} />
           </main>
         </motion.div>
