@@ -37,7 +37,8 @@ export default function ContactForm() {
           _honey: '',
         }),
       });
-      if (!res.ok) throw new Error('send failed');
+      const data = (await res.json().catch(() => null)) as { success?: string | boolean } | null;
+      if (!res.ok || !data || String(data.success) !== 'true') throw new Error('send failed');
       setStatus('sent');
     } catch {
       setStatus('error');

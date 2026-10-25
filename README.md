@@ -21,7 +21,7 @@ The deployable site is generated in `dist/`.
 
 Edit `src/data/portfolio.ts` for the name, introduction, contact details, education, experience, services, projects, skills and journey.
 
-- Email: husnain.tanvee123@gmail.com
+- Email: husnain.tanveer123@gmail.com
 - Phone: +92 300 6618392
 - LinkedIn: https://www.linkedin.com/in/husnain-tanveer-589556237/
 - WhatsApp: https://wa.me/923006618392

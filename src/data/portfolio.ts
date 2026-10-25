@@ -16,7 +16,7 @@ export const profile = {
   intro: 'I’m Husnain Tanveer, a full-stack developer in Faisalabad, Pakistan. I build Next.js web apps, custom Shopify stores and complete digital products — frontend, backend and everything between — for clients in the UK and worldwide. My workflow is AI-powered from prototype to production: faster delivery, without cutting corners on code quality.',
   about: 'Good websites make the next step feel simple. I focus on clear user journeys, consistent interfaces and the details that matter on a phone as much as on a desktop. Each build starts with your business goals and moves through feedback, refinement and testing.',
   summary: 'My background combines frontend work at ASDEV Tech, Shopify storefront development for UK brands at KR TASKER DIGITAL LTD and studies at Riphah International University. Today I work across the full stack — Next.js interfaces, Node.js backends and Shopify stores — with an AI-powered workflow from first prototype to launch.',
-  location: 'Faisalabad, Pakistan', email: 'husnain.tanvee123@gmail.com',
+  location: 'Faisalabad, Pakistan', email: 'husnain.tanveer123@gmail.com',
   phone: '+92 300 6618392', phoneHref: 'tel:+923006618392',
   links: { linkedin: 'https://www.linkedin.com/in/husnain-tanveer-589556237/', whatsapp: 'https://wa.me/923006618392', github: 'https://github.com/husnain900' },
   portrait: { src: `${import.meta.env.BASE_URL}assets/portrait-720.webp`, srcSet: `${import.meta.env.BASE_URL}assets/portrait-420.webp 420w, ${import.meta.env.BASE_URL}assets/portrait-720.webp 720w, ${import.meta.env.BASE_URL}assets/portrait-1100.webp 1100w`, alt: 'Husnain Tanveer in a black suit' },
