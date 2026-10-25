@@ -27,6 +27,64 @@ export function PosterBackdrop({ palette, children, className = '' }: { palette:
   );
 }
 
+/** Cinematic line-art scenes for projects without a public screenshot, keyed by project id. */
+const scenes: Record<string, ReactNode> = {
+  qubix: (
+    <g transform="translate(212 32)" fill="none" strokeWidth="2.5">
+      <rect x="38" y="0" width="46" height="36" rx="9" strokeOpacity="0.55" />
+      <rect x="38" y="132" width="46" height="36" rx="9" strokeOpacity="0.55" />
+      <rect x="16" y="32" width="90" height="104" rx="26" strokeOpacity="0.9" />
+      <rect x="108" y="66" width="11" height="24" rx="4" strokeOpacity="0.8" />
+      <line x1="61" y1="84" x2="61" y2="58" strokeWidth="4" strokeLinecap="round" />
+      <line x1="61" y1="84" x2="82" y2="94" strokeWidth="4" strokeLinecap="round" />
+      <circle cx="61" cy="84" r="5" strokeOpacity="0.9" />
+    </g>
+  ),
+  autoparts: (
+    <g transform="translate(120 78)" fill="none" strokeWidth="2.5">
+      <path d="M14 96 L38 58 Q43 49 56 47 L152 41 Q170 41 181 54 L202 78 L240 84 Q254 87 254 100 L254 112 L14 112 Z" strokeOpacity="0.9" />
+      <path d="M60 50 L86 84 M150 44 L172 80" strokeOpacity="0.45" />
+      <line x1="14" y1="112" x2="254" y2="112" strokeOpacity="0.4" />
+      <circle cx="66" cy="112" r="15" strokeOpacity="0.9" />
+      <circle cx="204" cy="112" r="15" strokeOpacity="0.9" />
+      <circle cx="66" cy="112" r="5" strokeOpacity="0.6" />
+      <circle cx="204" cy="112" r="5" strokeOpacity="0.6" />
+    </g>
+  ),
+  glowz: (
+    <g fill="none" strokeWidth="2.5">
+      <g transform="translate(238 96)">
+        <rect x="0" y="52" width="40" height="62" rx="6" strokeOpacity="0.9" />
+        <rect x="5" y="32" width="30" height="22" strokeOpacity="0.6" />
+        <path d="M5 32 L5 14 Q20 -4 35 14 L35 32 Z" strokeOpacity="0.9" />
+      </g>
+      <path d="M196 52 l4 10 10 4 -10 4 -4 10 -4 -10 -10 -4 10 -4 Z" strokeOpacity="0.8" />
+      <path d="M330 176 l3 8 8 3 -8 3 -3 8 -3 -8 -8 -3 8 -3 Z" strokeOpacity="0.6" />
+      <path d="M214 190 l2.5 6 6 2.5 -6 2.5 -2.5 6 -2.5 -6 -6 -2.5 6 -2.5 Z" strokeOpacity="0.5" />
+    </g>
+  ),
+  'game-rush-shopify': (
+    <g transform="translate(112 84)" fill="none" strokeWidth="2.5">
+      <rect x="0" y="0" width="176" height="96" rx="46" strokeOpacity="0.9" />
+      <path d="M44 34 v28 M30 48 h28" strokeWidth="4" strokeLinecap="round" strokeOpacity="0.85" />
+      <circle cx="128" cy="38" r="7" strokeOpacity="0.85" />
+      <circle cx="146" cy="56" r="7" strokeOpacity="0.65" />
+      <circle cx="52" cy="66" r="9" strokeOpacity="0.55" />
+      <circle cx="112" cy="66" r="9" strokeOpacity="0.55" />
+    </g>
+  ),
+  pawnique: (
+    <g transform="translate(196 66)" fill="none" strokeWidth="2.5">
+      <ellipse cx="88" cy="96" rx="38" ry="29" strokeOpacity="0.9" />
+      <circle cx="34" cy="52" r="12" strokeOpacity="0.75" />
+      <circle cx="66" cy="34" r="13" strokeOpacity="0.9" />
+      <circle cx="102" cy="34" r="13" strokeOpacity="0.9" />
+      <circle cx="134" cy="54" r="12" strokeOpacity="0.75" />
+    </g>
+  ),
+};
+scenes['gamerush-wp'] = scenes['game-rush-shopify'];
+
 /** Browser mockup for projects with a live public site; generated art for the rest. */
 export function ProjectArt({ project, className = '' }: { project: Project; className?: string }) {
   const a = project.palette.accent;
@@ -57,7 +115,8 @@ export function ProjectArt({ project, className = '' }: { project: Project; clas
           </radialGradient>
         </defs>
         <circle cx="290" cy="120" r="130" fill={`url(#g-${project.id})`} />
-        {project.motif === 'shield' && (
+        {scenes[project.id] ? <g stroke={a}>{scenes[project.id]}</g> : null}
+        {!scenes[project.id] && project.motif === 'shield' && (
           <g transform="translate(232 40)" fill="none" stroke={a} strokeOpacity="0.85">
             <path d="M58 0 L116 22 V78 C116 120 90 146 58 160 C26 146 0 120 0 78 V22 Z" strokeWidth="2" />
             <path d="M58 16 L102 33 V78 C102 111 82 132 58 144 C34 132 14 111 14 78 V33 Z" strokeWidth="1" strokeOpacity="0.4" />
@@ -67,7 +126,7 @@ export function ProjectArt({ project, className = '' }: { project: Project; clas
             <path d="M40 124 l12 12 l26 -28" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" />
           </g>
         )}
-        {project.motif === 'flow' && (
+        {!scenes[project.id] && project.motif === 'flow' && (
           <g fill="none" stroke={a}>
             <rect x="200" y="56" width="150" height="94" rx="12" strokeWidth="2" strokeOpacity="0.85" />
             <rect x="214" y="72" width="28" height="20" rx="4" strokeOpacity="0.7" />
@@ -82,7 +141,7 @@ export function ProjectArt({ project, className = '' }: { project: Project; clas
             </g>
           </g>
         )}
-        {project.motif === 'tenants' && (
+        {!scenes[project.id] && project.motif === 'tenants' && (
           <g fill="none" stroke={a}>
             {[0, 1, 2].map((r) =>
               [0, 1, 2, 3].map((c) => (
