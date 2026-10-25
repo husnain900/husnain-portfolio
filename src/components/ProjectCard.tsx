@@ -6,7 +6,7 @@ import { ProjectArt } from './Poster';
 export default function ProjectCard({ project, index, onOpen }: { project: Project; index: number; onOpen: () => void }) {
   return (
     <motion.article
-      className="w-[84vw] shrink-0 snap-start sm:w-[62vw] lg:w-[46vw] xl:w-[42vw]"
+      className="w-[80vw] shrink-0 snap-start sm:w-[54vw] lg:w-[38vw] xl:w-[32vw]"
       initial={{ opacity: 0, y: 40, filter: 'blur(10px)' }}
       whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
       viewport={{ once: true, margin: '0px -10% 0px 0px' }}
@@ -25,7 +25,7 @@ export default function ProjectCard({ project, index, onOpen }: { project: Proje
             }
           }}
           aria-label={`Open ${project.title}`}
-          className="focus-ring relative aspect-[4/5] overflow-hidden rounded-2xl ring-1 ring-white/10 transition duration-500 group-hover:shadow-[0_40px_80px_-20px_rgba(0,0,0,0.8)] group-hover:ring-white/25 sm:aspect-[16/12] lg:aspect-auto lg:h-[66vh]"
+          className="focus-ring relative aspect-[4/5] overflow-hidden rounded-2xl ring-1 ring-white/10 transition duration-500 group-hover:shadow-[0_40px_80px_-20px_rgba(0,0,0,0.8)] group-hover:ring-white/25 sm:aspect-[16/12] lg:aspect-auto lg:h-[54vh]"
         >
           <motion.div layoutId={`art-${project.id}`} className="absolute inset-0 overflow-hidden rounded-2xl">
             <div className="absolute inset-0 transition-transform duration-[1.4s] ease-[var(--ease-cine)] group-hover:scale-[1.07]">
@@ -44,7 +44,7 @@ export default function ProjectCard({ project, index, onOpen }: { project: Proje
             <motion.h3 layoutId={`title-${project.id}`} className="font-display text-[clamp(2.4rem,5vw,4.6rem)] leading-[0.88] tracking-wide text-bone">
               {project.title}
             </motion.h3>
-            <p className="mt-3 max-w-md text-sm leading-relaxed text-bone/75 sm:text-[15px]">{project.logline}</p>
+            <p className="mt-3 line-clamp-3 max-w-md text-sm leading-relaxed text-bone/75 sm:text-[15px]">{project.logline}</p>
             <div className="mt-4 flex flex-wrap gap-1.5">
               {project.stack.map((t) => (
                 <span key={t} className="rounded-full bg-black/35 px-2.5 py-1 text-[11px] font-medium text-bone/90 backdrop-blur">
