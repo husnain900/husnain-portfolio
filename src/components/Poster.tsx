@@ -100,7 +100,7 @@ export function ProjectArt({ project, className = '' }: { project: Project; clas
             <span className="h-2 w-2 rounded-full bg-[#28c840]" />
             <span className="ml-2 flex-1 truncate rounded bg-white/10 px-2 py-0.5 text-[9px] font-medium tracking-wide text-white/70">{host}</span>
           </div>
-          <img src={project.image} alt={`${project.title} — live website screenshot`} loading="lazy" className="block aspect-[16/10] w-full bg-white object-cover object-top" />
+          <img src={project.image} alt={`${project.title} — live website screenshot`} loading="lazy" decoding="async" className="block aspect-[16/10] w-full bg-white object-cover object-top" />
         </div>
       </PosterBackdrop>
     );
