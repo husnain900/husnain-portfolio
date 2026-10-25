@@ -4,9 +4,9 @@ import { EASE, SectionHeading, Tilt } from './fx';
 
 export default function About() {
   const facts = [
-    { k: 'Focus', v: 'Web Products & Storefronts', s: 'MVPs · React interfaces · Shopify' },
-    { k: 'Approach', v: 'AI-Assisted, Carefully Refined', s: 'Prototype · Review · Test · Launch' },
-    { k: 'Toolkit', v: 'React & Tailwind CSS', s: 'Reusable components · Responsive interfaces' },
+    { k: 'Focus', v: 'Web Products & Storefronts', s: 'Next.js apps · Shopify stores · SaaS' },
+    { k: 'Approach', v: 'AI-Powered, Carefully Refined', s: 'Prototype · Review · Test · Launch' },
+    { k: 'Toolkit', v: 'Next.js · Node · Tailwind CSS', s: 'Frontend + backend · Responsive interfaces' },
     { k: 'Based in', v: profile.location, s: 'Working with businesses remotely' },
   ];
 
